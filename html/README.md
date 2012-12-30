@@ -1,12 +1,12 @@
-# my HTML Web Site Skeleton
+# My HTML Web Site Skeleton
 
 ### create
 
-    ./make
-    ./build # <- the web site
+    make
+    cd build        # the web site
 
-    ./make rel # release build (compressed files)
+    make rel      # release build (compress output files)
 
-### auto-build
+### auto-building
 
-    ./auto-build # <- auto building when 'html','scss','js' file updated.
+    ./auto-build    # auto building when 'html','scss','js' file has updated.
