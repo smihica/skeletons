@@ -1,0 +1,9 @@
+build
+memo
+.DS_Store
+\#*
+.\#*
+~*
+*~
+
+scss/.sass-cache/
