@@ -1,12 +1,17 @@
 # My HTML Web Site Skeleton
 
-### create
+### Build
 
-    make
-    cd build        # the web site
+Install 'nodejs, uglifyjs, scss' beforehand.
 
-    make rel      # release build (compress output files)
+    $ make
 
-### auto-building
+Release build is.
 
-    ./auto-build    # auto building when 'html','scss','js' file has updated.
+    $ make rel    # will compress output files
+
+The created files will be installed ```www/```.
+
+Build with auto refresh is..
+
+    $ make auto
