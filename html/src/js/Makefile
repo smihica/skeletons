@@ -1,6 +1,6 @@
 COMPRESS=uglifyjs
-CONSTRUCT=../tools/jsconstruct
-BUILDDIR=../build
+CONSTRUCT=../../tools/jsconstruct
+BUILDDIR=../../www
 SRCS=$(shell ls **/*.js)
 
 .PHONY:		all clean

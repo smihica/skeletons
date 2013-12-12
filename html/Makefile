@@ -1,24 +1,16 @@
 STATICS=$(shell ls *.html images/*)
-BUILDDIR=build
+BUILDDIR=www
 
-dev:	init statics
-	$(MAKE) -C scss
-	$(MAKE) -C js
+dev:
+	$(MAKE) -C src
 
-rel:	init statics
-	$(MAKE) rel -C scss
-	$(MAKE) rel -C js
+rel:
+	$(MAKE) rel -C src
 
-statics: $(STATICS)
-	cp -r *.html $(BUILDDIR)/
-	cp -r images $(BUILDDIR)/
-
-init:
-	mkdir -p $(BUILDDIR)
+auto:	dev
+	./tools/update-watcher src/*.html src/scss/*.scss src/scss/**/*.scss src/js/*.js src/js/**/*.js -- $(MAKE) -C src
 
 clean:
-	$(MAKE) clean -C scss
-	$(MAKE) clean -C js
-	rm -rf $(BUILDDIR)/*
+	$(MAKE) clean -C src
 
 .PHONY: dev clean

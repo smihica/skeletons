@@ -1,3 +1,0 @@
-#!/bin/bash
-
-./tools/update-watcher *.html scss/*.scss scss/**/*.scss js/*.js js/**/*.js -- make

@@ -1,5 +1,5 @@
 SCSS=scss
-BUILDDIR=../build
+BUILDDIR=../../www
 SRCS=$(shell ls **/*.scss)
 
 .PHONY:		all clean
